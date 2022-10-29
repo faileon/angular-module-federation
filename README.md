@@ -6,6 +6,11 @@
 - samostatne pluginy a widgety lze `nx serve` a tim padem jednoduse vyvijet, lze je take vybuildit a zazipovat pro ucely nasi pluginizace.
   - moznost snadne integrace e2e testu
 
+## NX Angular Module Federation Plugin 
+- Vychozi sdilene moduly jsou: 
+  - @angular/animations
+  - @angular/common
+
 # Commands
 - novy plugin `npx nx g @nrwl/angular:remote plugins/<PLUGIN_NAME> --style=scss`
 - novy plugin/widget jako standalone componenta

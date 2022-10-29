@@ -1,0 +1,121 @@
+{
+  "name": "widgets-standalone",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/widgets/standalone/src",
+  "prefix": "ng-mfa",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/widgets/standalone",
+        "index": "apps/widgets/standalone/src/index.html",
+        "main": "apps/widgets/standalone/src/main.ts",
+        "polyfills": "apps/widgets/standalone/src/polyfills.ts",
+        "tsConfig": "apps/widgets/standalone/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/widgets/standalone/src/favicon.ico",
+          "apps/widgets/standalone/src/assets"
+        ],
+        "styles": ["apps/widgets/standalone/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/widgets/standalone/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/widgets/standalone/src/environments/environment.ts",
+              "with": "apps/widgets/standalone/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/widgets/standalone/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nrwl/angular:webpack-dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "widgets-standalone:build:production"
+        },
+        "development": {
+          "browserTarget": "widgets-standalone:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4202,
+        "publicHost": "http://localhost:4202"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "widgets-standalone:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/widgets/standalone/**/*.ts",
+          "apps/widgets/standalone/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/widgets/standalone/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/angular:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "widgets-standalone:build",
+        "port": 4202
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "widgets-standalone:build:development"
+        },
+        "production": {
+          "buildTarget": "widgets-standalone:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
