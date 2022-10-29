@@ -1,11 +1,11 @@
 /******/ var __webpack_modules__ = ({
 
-/***/ 4198:
+/***/ 1210:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var moduleMap = {
 	"./Module": () => {
-		return Promise.all([__webpack_require__.e(417), __webpack_require__.e(944), __webpack_require__.e(294), __webpack_require__.e(592)]).then(() => (() => ((__webpack_require__(9159)))));
+		return Promise.all([__webpack_require__.e(417), __webpack_require__.e(944), __webpack_require__.e(294), __webpack_require__.e(592)]).then(() => (() => ((__webpack_require__(7288)))));
 	}
 };
 var get = (module, getScope) => {
@@ -100,7 +100,7 @@ __webpack_require__.d(exports, {
 /******/ 	// This function allow to reference async chunks
 /******/ 	__webpack_require__.u = (chunkId) => {
 /******/ 		// return url for filenames based on template
-/******/ 		return "" + (chunkId === 592 ? "common" : chunkId) + "." + {"56":"87f3e042381b179b","256":"cef0b0a7c90c9bcc","294":"1bdebc584be9d3b4","322":"1aefd540fbdeea25","417":"ac7208bf3f3c6f9d","481":"8981ae0de2995f60","592":"3f772ec0cf1134a5","806":"f9f7ec5dfbee519f","895":"82524a3479e9a8b7","944":"6052930534a505c3"}[chunkId] + ".js";
+/******/ 		return "" + (chunkId === 592 ? "common" : chunkId) + "." + {"56":"a9bc0d1cb83b54b3","256":"d73c5b1d29980d72","294":"46f398d08fd8dbeb","322":"54d31e0a40fa91ea","417":"c7f25da0509f56c3","481":"0cbfaa0dadd988e9","592":"59d74b3178532892","806":"ab9a363844a23a94","895":"2995e6cc361257df","944":"9693e749463278e9"}[chunkId] + ".js";
 /******/ 	};
 /******/ })();
 /******/ 
@@ -121,7 +121,7 @@ __webpack_require__.d(exports, {
 /******/ /* webpack/runtime/load script */
 /******/ (() => {
 /******/ 	var inProgress = {};
-/******/ 	var dataWebpackPrefix = "calendar:";
+/******/ 	var dataWebpackPrefix = "plugins-calendar:";
 /******/ 	// loadScript function to load a script via script tag
 /******/ 	__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 		if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -194,7 +194,7 @@ __webpack_require__.d(exports, {
 /******/ 		// runs all init snippets from all modules reachable
 /******/ 		var scope = __webpack_require__.S[name];
 /******/ 		var warn = (msg) => (typeof console !== "undefined" && console.warn && console.warn(msg));
-/******/ 		var uniqueName = "calendar";
+/******/ 		var uniqueName = "plugins-calendar";
 /******/ 		var register = (name, version, factory, eager) => {
 /******/ 			var versions = scope[name] = scope[name] || {};
 /******/ 			var activeVersion = versions[version];
@@ -451,7 +451,7 @@ __webpack_require__.d(exports, {
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		548: 0
+/******/ 		894: 0
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
@@ -528,7 +528,7 @@ __webpack_require__.d(exports, {
 /******/ 	
 /******/ 	}
 /******/ 	
-/******/ 	var chunkLoadingGlobal = self["webpackChunkcalendar"] = self["webpackChunkcalendar"] || [];
+/******/ 	var chunkLoadingGlobal = self["webpackChunkplugins_calendar"] = self["webpackChunkplugins_calendar"] || [];
 /******/ 	chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 	chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ })();
@@ -538,7 +538,7 @@ __webpack_require__.d(exports, {
 /******/ // module cache are used so entry inlining is disabled
 /******/ // startup
 /******/ // Load entry module and return exports
-/******/ var __webpack_exports__ = __webpack_require__(4198);
+/******/ var __webpack_exports__ = __webpack_require__(1210);
 /******/ var __webpack_exports__get = __webpack_exports__.get;
 /******/ var __webpack_exports__init = __webpack_exports__.init;
 /******/ export { __webpack_exports__get as get, __webpack_exports__init as init };
