@@ -1,3 +1,4 @@
 {
-  "calendar": "http://localhost:4201"
+  "calendar": "http://localhost:4201",
+  "standalone": "http://localhost:4202"
 }
