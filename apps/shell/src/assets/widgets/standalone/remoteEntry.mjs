@@ -1,14 +1,11 @@
 /******/ var __webpack_modules__ = ({
 
-/***/ 2527:
+/***/ 574:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var moduleMap = {
-	"./Module": () => {
-		return Promise.all([__webpack_require__.e(417), __webpack_require__.e(944), __webpack_require__.e(294), __webpack_require__.e(592)]).then(() => (() => ((__webpack_require__(7288)))));
-	},
 	"./Component": () => {
-		return Promise.all([__webpack_require__.e(417), __webpack_require__.e(944), __webpack_require__.e(230)]).then(() => (() => ((__webpack_require__(1230)))));
+		return Promise.all([__webpack_require__.e(944), __webpack_require__.e(417), __webpack_require__.e(978)]).then(() => (() => ((__webpack_require__(1978)))));
 	}
 };
 var get = (module, getScope) => {
@@ -115,7 +112,7 @@ __webpack_require__.d(exports, {
 /******/ 	// This function allow to reference async chunks
 /******/ 	__webpack_require__.u = (chunkId) => {
 /******/ 		// return url for filenames based on template
-/******/ 		return "" + (chunkId === 592 ? "common" : chunkId) + "." + {"222":"d70eb04ab6f5293d","230":"efe317ea9351ba4e","274":"f00f19225f8a8de9","294":"46f398d08fd8dbeb","322":"9096bb672eb9bed4","417":"c7f25da0509f56c3","481":"0cbfaa0dadd988e9","592":"680c78edef8f2354","806":"ab9a363844a23a94","895":"2995e6cc361257df","941":"9d9514d1e5119048","944":"9693e749463278e9"}[chunkId] + ".js";
+/******/ 		return "" + chunkId + "." + {"56":"d1b5a980965575b4","256":"3591518732703517","322":"b84d59612cebaa00","417":"8a2fabaced7836c0","481":"968656826ad5e428","806":"59546663d23a9678","895":"43eb337819856c7e","944":"d0204b11ea5a7dcc","978":"531e6a505c1c7c69"}[chunkId] + ".js";
 /******/ 	};
 /******/ })();
 /******/ 
@@ -136,7 +133,7 @@ __webpack_require__.d(exports, {
 /******/ /* webpack/runtime/load script */
 /******/ (() => {
 /******/ 	var inProgress = {};
-/******/ 	var dataWebpackPrefix = "plugins-calendar:";
+/******/ 	var dataWebpackPrefix = "widgets-standalone:";
 /******/ 	// loadScript function to load a script via script tag
 /******/ 	__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 		if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -209,7 +206,7 @@ __webpack_require__.d(exports, {
 /******/ 		// runs all init snippets from all modules reachable
 /******/ 		var scope = __webpack_require__.S[name];
 /******/ 		var warn = (msg) => (typeof console !== "undefined" && console.warn && console.warn(msg));
-/******/ 		var uniqueName = "plugins-calendar";
+/******/ 		var uniqueName = "widgets-standalone";
 /******/ 		var register = (name, version, factory, eager) => {
 /******/ 			var versions = scope[name] = scope[name] || {};
 /******/ 			var activeVersion = versions[version];
@@ -230,10 +227,9 @@ __webpack_require__.d(exports, {
 /******/ 		switch(name) {
 /******/ 			case "default": {
 /******/ 				register("@angular/common", "14.2.8", () => (Promise.all([__webpack_require__.e(944), __webpack_require__.e(895)]).then(() => (() => (__webpack_require__(6895))))));
-/******/ 				register("@angular/core", "14.2.8", () => (Promise.all([__webpack_require__.e(222), __webpack_require__.e(592), __webpack_require__.e(274)]).then(() => (() => (__webpack_require__(8274))))));
-/******/ 				register("@angular/platform-browser", "14.2.8", () => (Promise.all([__webpack_require__.e(417), __webpack_require__.e(944), __webpack_require__.e(481)]).then(() => (() => (__webpack_require__(1481))))));
-/******/ 				register("@angular/router", "14.2.8", () => (Promise.all([__webpack_require__.e(417), __webpack_require__.e(944), __webpack_require__.e(222), __webpack_require__.e(806), __webpack_require__.e(322)]).then(() => (() => (__webpack_require__(5322))))));
-/******/ 				register("@ng-mfa/shared/data-access/random", "1.0.0", () => (Promise.all([__webpack_require__.e(417), __webpack_require__.e(944), __webpack_require__.e(222), __webpack_require__.e(592)]).then(() => (() => (__webpack_require__(409))))));
+/******/ 				register("@angular/core", "14.2.8", () => (Promise.all([__webpack_require__.e(56), __webpack_require__.e(256)]).then(() => (() => (__webpack_require__(8256))))));
+/******/ 				register("@angular/platform-browser", "14.2.8", () => (Promise.all([__webpack_require__.e(944), __webpack_require__.e(417), __webpack_require__.e(481)]).then(() => (() => (__webpack_require__(1481))))));
+/******/ 				register("@angular/router", "14.2.8", () => (Promise.all([__webpack_require__.e(944), __webpack_require__.e(417), __webpack_require__.e(56), __webpack_require__.e(322), __webpack_require__.e(806)]).then(() => (() => (__webpack_require__(5322))))));
 /******/ 			}
 /******/ 			break;
 /******/ 		}
@@ -410,20 +406,12 @@ __webpack_require__.d(exports, {
 /******/ 	});
 /******/ 	var installedModules = {};
 /******/ 	var moduleToHandlerMapping = {
-/******/ 		8944: () => (loadStrictSingletonVersionCheckFallback("default", "@angular/core", [2,14,2,0], () => (Promise.all([__webpack_require__.e(222), __webpack_require__.e(592), __webpack_require__.e(274)]).then(() => (() => (__webpack_require__(8274))))))),
+/******/ 		8944: () => (loadStrictSingletonVersionCheckFallback("default", "@angular/core", [2,14,2,0], () => (Promise.all([__webpack_require__.e(56), __webpack_require__.e(256)]).then(() => (() => (__webpack_require__(8256))))))),
 /******/ 		417: () => (loadStrictSingletonVersionCheckFallback("default", "@angular/common", [2,14,2,0], () => (__webpack_require__.e(895).then(() => (() => (__webpack_require__(6895))))))),
-/******/ 		9806: () => (loadStrictSingletonVersionCheckFallback("default", "@angular/platform-browser", [2,14,2,0], () => (Promise.all([__webpack_require__.e(417), __webpack_require__.e(481)]).then(() => (() => (__webpack_require__(1481))))))),
-/******/ 		5294: () => (loadStrictSingletonVersionCheckFallback("default", "@angular/router", [2,14,2,0], () => (Promise.all([__webpack_require__.e(417), __webpack_require__.e(222), __webpack_require__.e(806), __webpack_require__.e(322)]).then(() => (() => (__webpack_require__(5322))))))),
-/******/ 		412: () => (loadFallback("default", "@ng-mfa/shared/data-access/random", () => (Promise.all([__webpack_require__.e(222), __webpack_require__.e(592)]).then(() => (() => (__webpack_require__(409)))))))
+/******/ 		9806: () => (loadStrictSingletonVersionCheckFallback("default", "@angular/platform-browser", [2,14,2,0], () => (__webpack_require__.e(481).then(() => (() => (__webpack_require__(1481)))))))
 /******/ 	};
 /******/ 	// no consumes in initial chunks
 /******/ 	var chunkMapping = {
-/******/ 		"230": [
-/******/ 			412
-/******/ 		],
-/******/ 		"294": [
-/******/ 			5294
-/******/ 		],
 /******/ 		"417": [
 /******/ 			417
 /******/ 		],
@@ -471,7 +459,7 @@ __webpack_require__.d(exports, {
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		894: 0
+/******/ 		573: 0
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
@@ -483,7 +471,7 @@ __webpack_require__.d(exports, {
 /******/ 				if(installedChunkData) {
 /******/ 					promises.push(installedChunkData[2]);
 /******/ 				} else {
-/******/ 					if(!/^(294|417|806|944)$/.test(chunkId)) {
+/******/ 					if(!/^(417|806|944)$/.test(chunkId)) {
 /******/ 						// setup Promise in chunk cache
 /******/ 						var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 						promises.push(installedChunkData[2] = promise);
@@ -548,7 +536,7 @@ __webpack_require__.d(exports, {
 /******/ 	
 /******/ 	}
 /******/ 	
-/******/ 	var chunkLoadingGlobal = self["webpackChunkplugins_calendar"] = self["webpackChunkplugins_calendar"] || [];
+/******/ 	var chunkLoadingGlobal = self["webpackChunkwidgets_standalone"] = self["webpackChunkwidgets_standalone"] || [];
 /******/ 	chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 	chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ })();
@@ -558,7 +546,7 @@ __webpack_require__.d(exports, {
 /******/ // module cache are used so entry inlining is disabled
 /******/ // startup
 /******/ // Load entry module and return exports
-/******/ var __webpack_exports__ = __webpack_require__(2527);
+/******/ var __webpack_exports__ = __webpack_require__(574);
 /******/ var __webpack_exports__get = __webpack_exports__.get;
 /******/ var __webpack_exports__init = __webpack_exports__.init;
 /******/ export { __webpack_exports__get as get, __webpack_exports__init as init };

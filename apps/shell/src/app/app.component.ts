@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
 import {loadRemoteModule} from "@nrwl/angular/mf";
-import {RemoteEntryComponent} from "../../../widgets/standalone/src/app/remote-entry/entry.component";
+import {RandomService} from "@ng-mfa/shared/data-access/random";
+import {delay} from "rxjs";
 
 @Component({
   selector: 'ng-mfa-root',
@@ -15,6 +16,10 @@ export class AppComponent implements OnInit {
   public cmpStandaloneRef!: ViewContainerRef;
 
   title = 'shell';
+
+
+  constructor(public randomService: RandomService) {
+  }
 
   ngOnInit() {
 

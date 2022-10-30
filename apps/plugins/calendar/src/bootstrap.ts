@@ -8,6 +8,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+console.log('bootstrap from remote');
 platformBrowserDynamic()
   .bootstrapModule(AppModule)
   .catch((err) => console.error(err));

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {RandomService} from "@ng-mfa/shared/data-access/random";
 
 @Component({
   selector: 'ng-mfa-exposed',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exposed.component.scss'],
 })
 export class ExposedComponent implements OnInit {
-  constructor() {}
+
+  constructor(public randomService: RandomService) {}
 
   ngOnInit(): void {}
 }

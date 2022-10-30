@@ -20,6 +20,7 @@ import { ExposedComponent } from './exposed/exposed.component';
       ],
       { initialNavigation: 'enabledBlocking' }
     ),
+
   ],
   providers: [],
   bootstrap: [AppComponent],
