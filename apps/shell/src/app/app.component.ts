@@ -15,22 +15,25 @@ export class AppComponent implements OnInit {
   public cmpStandaloneRef!: ViewContainerRef;
 
   title = 'shell';
+  isCalendarComponentLoaded = false;
 
 
   constructor(public randomService: RandomService) {
   }
 
   ngOnInit() {
-
-    loadRemoteModule('calendar', './Component').then(container => {
-      const {ExposedComponent} = container;
-      this.cmpRef.createComponent(ExposedComponent);
-    })
-
     loadRemoteModule('standalone', './Component').then(container => {
       const {RemoteEntryComponent} = container;
       this.cmpStandaloneRef.createComponent(RemoteEntryComponent);
     })
 
+  }
+
+  loadCalendarComponent() {
+    loadRemoteModule('calendar', './Component').then(container => {
+      const {ExposedComponent} = container;
+      this.cmpRef.createComponent(ExposedComponent);
+      this.isCalendarComponentLoaded = true;
+    })
   }
 }

@@ -4,6 +4,7 @@
   {{randomService.randomString$ | async}}
 </p>
 
+<h3>Navigace</h3>
 <ul class="remote-menu">
   <li><a routerLink="/">Home</a></li>
   <li><a routerLink="calendar">Calendar</a></li>
@@ -11,6 +12,7 @@
 
 <div class="component">
   <h2>Nactena komponenta z calendar modulu:</h2>
+  <button *ngIf="!isCalendarComponentLoaded" (click)="loadCalendarComponent()">Načíst...</button>
   <ng-template #cmpRef></ng-template>
 </div>
 
