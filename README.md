@@ -1,7 +1,7 @@
 # Plugin Architektura s Webpack5, NX a Angular 14+ (Ivy + AOT)
 ## Jak spustit:
 1. Vybuildit plugin a widget (mělo by být součástí gitu, lze přeskočit na krok 3.)
-   1. `npm run build:all`
+   1. `npm run build:remotes`
 1. přetáhnout obsah složky `dist/apps` do `apps/shell/assets` (v assets tedy bude složka `plugins` a `widgets`)
 1. spustit aplikaci pomocí: `nx run shell:serve:production`
 1. otevřít [aplikaci](http://localhost:4200)

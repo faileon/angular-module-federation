@@ -7,5 +7,6 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   selector: 'ng-mfa-widgets-standalone-entry',
   templateUrl: './entry.component.html',
+  styleUrls: ['./entry.component.scss'],
 })
 export class RemoteEntryComponent {}

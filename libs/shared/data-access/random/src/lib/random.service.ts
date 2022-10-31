@@ -1,5 +1,5 @@
 import {Injectable, NgModuleRef} from '@angular/core';
-import {map, Observable, share, timer} from "rxjs";
+import {map, Observable, shareReplay, timer} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class RandomService {
     this.randomString$ = timer(0, 5000)
       .pipe(
         map(() => Math.random().toString(36)),
-        share(),
+        shareReplay(),
       )
 
   }

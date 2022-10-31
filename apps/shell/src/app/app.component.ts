@@ -1,7 +1,6 @@
 import {Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
 import {loadRemoteModule} from "@nrwl/angular/mf";
 import {RandomService} from "@ng-mfa/shared/data-access/random";
-import {delay} from "rxjs";
 
 @Component({
   selector: 'ng-mfa-root',
